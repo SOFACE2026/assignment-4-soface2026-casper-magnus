@@ -9,6 +9,7 @@ AnimalRightsGroup::AnimalRightsGroup(int n_monkeys, int n_tigers, int n_fish)
 // Implement this (Observer part)
 void AnimalRightsGroup::update(AnimalEvent event)
 {
+    // observerer om dyrene bliver plejet ordentligt
     if (event == AnimalEvent::MonkeyFed)
     {
         n_monkeys_fed++;

@@ -4,6 +4,7 @@
 // Implement this (Observer part)
 void Subject::attach(Observer *subscriber)
 {
+    // tilføjer en pointer til en observer til subscriber vectoren
     subscribers.push_back(subscriber);
 }
 
@@ -19,6 +20,7 @@ void Subject::detach(Observer *subscriber)
 // Implement this (Observer part)
 void Subject::notify(AnimalEvent event)
 {
+    // giver alle subscribers beskeder om hændelser ved dyrene
     for (Observer *obs : subscribers){
         obs->update(event);
     }
